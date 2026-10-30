@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Happy 18th Birthday Tanisha!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Decorative background -->
+  <div class="background-decor" aria-hidden="true">
+    <span class="float-decor decor-1">🎀</span>
+    <span class="float-decor decor-2">🌸</span>
+    <span class="float-decor decor-3">🦋</span>
+    <span class="float-decor decor-4">💗</span>
+    <span class="float-decor decor-5">✿</span>
+    <span class="float-decor decor-6">✨</span>
+    <span class="float-decor decor-7">🌷</span>
+    <span class="float-decor decor-8">♡</span>
+    <span class="sparkle sparkle-1">✦</span>
+    <span class="sparkle sparkle-2">✧</span>
+    <span class="sparkle sparkle-3">✦</span>
+    <span class="sparkle sparkle-4">✧</span>
+  </div>
+
+  <main>
+
+    <!-- 1. PIN SCREEN -->
+    <section class="screen active" id="pinScreen">
+      <div class="main-card pin-card">
+        <div class="big-icon">🎀</div>
+        <p class="eyebrow">A little surprise awaits</p>
+        <h1>Hey, Birthday Girl!</h1>
+        <p class="subtitle">
+          This little world is made just for you.
+          Enter your secret code to unlock it. 💗
+        </p>
+
+        <div class="pin-boxes">
+          <div class="pin-box" id="pin0"></div>
+          <div class="pin-box" id="pin1"></div>
+          <div class="pin-box" id="pin2"></div>
+          <div class="pin-box" id="pin3"></div>
+        </div>
+
+        <div class="keypad">
+          <button class="key" data-number="1">1</button>
+          <button class="key" data-number="2">2</button>
+          <button class="key" data-number="3">3</button>
+          <button class="key" data-number="4">4</button>
+          <button class="key" data-number="5">5</button>
+          <button class="key" data-number="6">6</button>
+          <button class="key" data-number="7">7</button>
+          <button class="key" data-number="8">8</button>
+          <button class="key" data-number="9">9</button>
+          <button class="key" id="deletePin">⌫</button>
+          <button class="key" data-number="0">0</button>
+          <button class="key" id="clearPin">C</button>
+        </div>
+
+        <p id="pinMessage" class="status-message">
+          Hint: Your special day 💕
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. WELCOME -->
+    <section class="screen" id="welcomeScreen">
+      <div class="content">
+        <div class="big-icon">💌</div>
+        <p class="eyebrow">A special delivery</p>
+        <h1>Finally!</h1>
+        <h2>The birthday girl has arrived!</h2>
+        <p class="subtitle">
+          Someone has been waiting to make your day extra special.
+          And yes, it's your favourite Didi! 😉
+        </p>
+        <button class="primary-btn" data-go="questionScreen">
+          Open your surprise ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- 3. YES / NO -->
+    <section class="screen" id="questionScreen">
+      <div class="main-card">
+        <div class="big-icon">🥹</div>
+        <p class="eyebrow">Before we begin</p>
+        <h2>Are you ready for your birthday surprise?</h2>
+        <p class="subtitle" id="noMessage">
+          Think carefully before answering! 👀
+        </p>
+
+        <div class="button-area">
+          <button class="primary-btn" id="yesButton">YES! 💗</button>
+          <button class="secondary-btn" id="noButton">NO 🙄</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CELEBRATION -->
+    <section class="screen" id="celebrationScreen">
+      <div class="content">
+        <p class="eyebrow">30 October · A beautiful day</p>
+        <div class="big-icon">🎂🎈</div>
+        <h1>Happy 18th Birthday!</h1>
+        <h2 class="pink-text">Tanisha ❤️</h2>
+        <p class="subtitle">
+          Eighteen years of laughter, love, little fights and countless
+          memories. May this new chapter bring you beautiful opportunities,
+          happiness and everything your heart wishes for.
+        </p>
+        <button class="primary-btn" data-go="galleryScreen">
+          Let's explore your memories →
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. PHOTO SCRAPBOOK -->
+    <section class="screen" id="galleryScreen">
+      <div class="content wide-content">
+        <p class="eyebrow">A book of beautiful memories</p>
+        <h2>Little Moments, Big Memories 📸</h2>
+        <p class="subtitle">
+          Every picture has a story, and every story has a special place
+          in our hearts.
+        </p>
+
+        <div class="gallery" id="gallery"></div>
+
+        <p class="closing-line">
+          Different moments, different memories,
+          but one family and endless love. 💗
+        </p>
+        <button class="primary-btn" data-go="reasonsScreen">
+          Next surprise →
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. APPRECIATION WALL -->
+    <section class="screen" id="reasonsScreen">
+      <div class="content wide-content">
+        <p class="eyebrow">A little reminder</p>
+        <h2>Why You're So Special 💕</h2>
+        <p class="subtitle">
+          Because being you is already something wonderful.
+        </p>
+
+        <div class="reasons-grid">
+          <article class="reason-card">
+            <span>🌸</span>
+            <h3>Your Smile</h3>
+            <p>You make ordinary moments brighter.</p>
+          </article>
+          <article class="reason-card">
+            <span>😂</span>
+            <h3>Your Drama</h3>
+            <p>Life would be boring without your daily entertainment.</p>
+          </article>
+          <article class="reason-card">
+            <span>💗</span>
+            <h3>Your Heart</h3>
+            <p>You care more than you sometimes show.</p>
+          </article>
+          <article class="reason-card">
+            <span>✨</span>
+            <h3>Your Dreams</h3>
+            <p>Your dreams deserve every chance to come true.</p>
+          </article>
+          <article class="reason-card">
+            <span>🥰</span>
+            <h3>Your Cuteness</h3>
+            <p>Even when you're being impossible!</p>
+          </article>
+          <article class="reason-card">
+            <span>🤝</span>
+            <h3>Your Love</h3>
+            <p>You make our family feel complete.</p>
+          </article>
+          <article class="reason-card">
+            <span>🌈</span>
+            <h3>Your Energy</h3>
+            <p>You bring your own kind of magic.</p>
+          </article>
+          <article class="reason-card">
+            <span>🫶</span>
+            <h3>Simply You</h3>
+            <p>There is nobody else quite like you.</p>
+          </article>
+          <article class="reason-card">
+            <span>🎀</span>
+            <h3>Your Little Habits</h3>
+            <p>Even the silly ones are memorable.</p>
+          </article>
+          <article class="reason-card">
+            <span>❤️</span>
+            <h3>Our Tanisha</h3>
+            <p>We are lucky to have you in our lives.</p>
+          </article>
+        </div>
+
+        <button class="primary-btn" data-go="familyScreen">
+          Family wishes →
+        </button>
+      </div>
+    </section>
+
+    <!-- 7. FAMILY WISHES -->
+    <section class="screen" id="familyScreen">
+      <div class="content wide-content">
+        <p class="eyebrow">With love from your family</p>
+        <h2>Little Messages, Endless Love 💌</h2>
+        <p class="subtitle">
+          Tap each card to open your special birthday wish.
+        </p>
+
+        <div class="message-grid" id="familyMessages"></div>
+
+        <button class="primary-btn" data-go="giftScreen">
+          Open your special gift →
+        </button>
+      </div>
+    </section>
+
+    <!-- 8. SECRET GIFT -->
+    <section class="screen" id="giftScreen">
+      <div class="content wide-content">
+        <p class="eyebrow">Something special for you</p>
+        <h2>A Gift Full of Little Surprises 🎁</h2>
+        <p class="subtitle">
+          One gift, four little envelopes. Open each one!
+        </p>
+
+        <button class="gift-button" id="giftButton" aria-label="Open gift">
+          🎁
+        </button>
+
+        <p id="giftHint" class="small-note">
+          Tap the gift box to discover your envelopes.
+        </p>
+
+        <div class="message-grid hidden" id="envelopes"></div>
+
+        <button class="primary-btn" data-go="cakeScreen">
+          One last birthday surprise →
+        </button>
+      </div>
+    </section>
+
+    <!-- 9. CAKE -->
+    <section class="screen" id="cakeScreen">
+      <div class="content">
+        <p class="eyebrow">The most special moment</p>
+        <h2>Make a Wish, Birthday Girl! ✨</h2>
+
+        <div class="wish-card">
+          <div class="big-icon">🌟</div>
+          <h3>Close your eyes for a moment...</h3>
+          <p>
+            Think of something beautiful. Make a wish from your heart.
+            When you're ready, blow out your candles!
+          </p>
+          <p class="wish-highlight">
+            Your wishes deserve to come true. 💗
+          </p>
+        </div>
+
+        <div class="cake">
+          <div class="candles">
+            <button class="candle" aria-label="Blow out candle 1">
+              <span class="flame"></span>
+            </button>
+            <button class="candle" aria-label="Blow out candle 2">
+              <span class="flame"></span>
+            </button>
+            <button class="candle" aria-label="Blow out candle 3">
+              <span class="flame"></span>
+            </button>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-body">
+            <span>Happy Birthday!</span>
+          </div>
+        </div>
+
+        <p id="cakeMessage" class="status-message">
+          Tap each candle to blow it out. 🕯️
+        </p>
+
+        <button class="primary-btn hidden" id="cakeNext">
+          Read your letter 💌
+        </button>
+      </div>
+    </section>
+
+    <!-- 10. LETTER -->
+    <section class="screen" id="letterScreen">
+      <div class="content">
+        <p class="eyebrow">From your Didi, with love</p>
+        <h2>A Little Letter for You 💗</h2>
+
+        <article class="letter">
+          <p>My dearest Tanisha,</p>
+
+          <p>Happy 18th birthday, little one! ❤️</p>
+
+          <p>
+            I still remember the little girl you were, and now look at you —
+            officially 18! Time really needs to slow down. Although,
+            honestly, I still think you're the same little kid who can
+            annoy me in record time. 😂
+          </p>
+
+          <p>
+            We may fight over the smallest things, tease each other for
+            no reason and sometimes disagree on absolutely everything.
+            But underneath all that teasing, you will always have a
+            special place in my heart.
+          </p>
+
+          <p>
+            I want you to dream big, believe in yourself and never stop
+            trying. Life won't always be easy, but never think that you
+            have to figure everything out in one day. Take your time,
+            learn, grow and enjoy every little moment.
+          </p>
+
+          <p>
+            I hope you always find reasons to smile, people who genuinely
+            care about you and opportunities that help you become the
+            person you dream of being.
+          </p>
+
+          <p>
+            And one important thing: no matter how grown-up you become,
+            your Didi will still have the right to tease you, give you
+            advice and remind you to behave! 😂
+          </p>
+
+          <p>
+            Thank you for being my sister, my partner in memories and
+            sometimes my favourite headache.
+          </p>
+
+          <p>
+            Love you more than all our little fights could ever express.
+          </p>
+
+          <p><strong>Happy 18th Birthday, Tanisha!</strong></p>
+
+          <p>Always yours,<br>Your Didi ❤️</p>
+        </article>
+
+        <button class="primary-btn" data-go="finalScreen">
+          One last thing... ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- 11. FINAL SCREEN -->
+    <section class="screen" id="finalScreen">
+      <div class="content">
+        <div class="big-icon">💗</div>
+        <p class="eyebrow">Always and forever</p>
+        <h1>Tanisha,</h1>
+        <h2>You'll always be my little sister.</h2>
+
+        <p class="subtitle">
+          No matter how much you grow, where life takes you or how many
+          birthdays pass, remember one thing:
+        </p>
+
+        <h2 class="pink-text">I am always there for you. ❤️</h2>
+        <p>Happy 18th Birthday once again!</p>
+        <p class="eyebrow">Made with love by Didi 🎀</p>
+
+        <button class="secondary-btn" id="replayButton">
+          Replay the surprise ↻
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="confettiContainer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
